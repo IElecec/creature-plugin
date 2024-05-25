@@ -9,12 +9,12 @@
     },
     "api":{
         "type": "openapi",
-        "url": "http://127.0.0.1:8088/.well-known/openapi.yaml"
+        "url": "http://139.224.200.123:8088/.well-known/openapi.yaml"
     },
-    "logo_url": "http://127.0.0.1:8088/logo.png",
+    "logo_url": "http://139.224.200.123:8088/logo.png",
     "contact_email": "support@example.com",
     "legal_info_url": "http://www.example.com/legal",
     "examples": {
-        "url": "http://127.0.0.1:8088/.well-known/example.yaml"
+        "url": "http://139.224.200.123:8088/.well-known/example.yaml"
     }
 }
