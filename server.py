@@ -24,12 +24,12 @@ async def anwser_question():
     prompt = f"你正在玩海龟汤，游戏状态是{hgt.status}， 根据汤底：{tangdi}, 用“是”、“不是”、或“不重要”回答问题：{question}，" \
               "回答必须只能从“是”、“不是”、或“不重要”这三个里选择。不允许添加内容。"
     return make_json_response({"message": "我的回答是：", "prompt": prompt})
-@app.route("/add_story", methods=['POST'])
-async def add_story():
-    story = request.get_json()
-    response = hgt.addStory(story)
-    prompt = "不允许添加内容。"
-    return make_json_response({"message": response, "prompt": prompt})
+# @app.route("/add_story", methods=['POST'])
+# async def add_story():
+#     story = request.get_json()
+#     response = hgt.addStory(story)
+#     prompt = "不允许添加内容。"
+#     return make_json_response({"message": response, "prompt": prompt})
 @app.route("/make_prediction", methods=['POST'])
 async def make_prediction():
     prediction = request.get_json()['prediction']

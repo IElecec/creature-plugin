@@ -33,20 +33,4 @@ components:
                 question:
                     type: string
                     description: 用户提出一个问题。
-        addStory:
-            type: object
-            required: [story]
-            properties:
-                title:
-                    type: string
-                    description: 需要添加的海龟汤的题目
-                types:
-                    type: string
-                    description: 需要添加的海龟汤的类型
-                tangmian:
-                    type: string
-                    description: 需要添加的海龟汤的汤面
-                tangdi:
-                    type: string
-                    description: 需要添加的海龟汤的汤底
 
