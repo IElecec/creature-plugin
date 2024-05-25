@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+    title: 海龟汤游戏插件
+    description: 和用户进行交互，帮助用户玩海龟汤文字游戏，开始提出一个事件，用户会询问问题，根据汤面、汤底和用户的问题，以“是”、“不是”或“不重要”回答
+    version: "v1"
+servers:
+    - url: http://127.0.0.1:8088
+path:
+    /anwser_question:
+        post:
+            operationId: anwserQuestion
+            summary: 提取用户提的一个问题
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/anwserQuestion"
+            responses:
+                "200":
+                    description: 用“是”、“不是”或“不重要”回答用户的问题。
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/messageResponse"
+
+components:
+    schemas:
+        anwserQuestion:
+            type: object
+            required: [question]
+            properties:
+                question:
+                    type: string
+                    description: 用户提出一个问题。
+        addStory:
+            type: object
+            required: [story]
+            properties:
+                title:
+                    type: string
+                    description: 需要添加的海龟汤的题目
+                types:
+                    type: string
+                    description: 需要添加的海龟汤的类型
+                tangmian:
+                    type: string
+                    description: 需要添加的海龟汤的汤面
+                tangdi:
+                    type: string
+                    description: 需要添加的海龟汤的汤底
+
