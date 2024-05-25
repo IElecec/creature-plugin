@@ -5,7 +5,7 @@ examples:
             content: 我的问题是这个人是不是男人？
           - role: bot
             plugin:
-              operationId: answerQuestion
+              operationId: anwserQuestion
               thoughts: 这是用户根据汤面进行提问的需求
               requestArguments:
                 question: "这个人是不是男人?"     
