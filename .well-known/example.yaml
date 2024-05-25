@@ -9,7 +9,6 @@ examples:
               thoughts: 这是用户根据汤面进行提问的需求
               requestArguments:
                 question: "这个人是不是男人?"     
-                query: 我的问题是这个人是不是男人？
       - context: # 对话历史
           - role: user
             content: 你知道海龟汤怎么玩吗
