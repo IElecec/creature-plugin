@@ -60,4 +60,4 @@ async def example_spec():
         text = f.read()
         return text, 200, {"Content-Type": "text/yaml"}
 if __name__ == '__main__':
-    app.run(debug=True, host='139.224.200.123', port=8088)
+    app.run(debug=True, host="0,0,0,0", port=8088)
