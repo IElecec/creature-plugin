@@ -1,2 +1,2 @@
 # creature-plugin
-A plugin for a teamwork project.
+This plugin is built a help generate unique creatures with AI.
