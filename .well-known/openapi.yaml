@@ -33,4 +33,11 @@ components:
                 question:
                     type: string
                     description: 用户提出一个问题。
+        messageResponse:
+            type: object
+            required: [message]
+            properties:
+                message:
+                    type: string
+                    description: 回复信息
 
