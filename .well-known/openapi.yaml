@@ -4,7 +4,7 @@ info:
     description: 和用户进行交互，帮助用户玩海龟汤文字游戏，开始提出一个事件，用户会询问问题，根据汤面、汤底和用户的问题，以“是”、“不是”或“不重要”回答
     version: "v1"
 servers:
-    - url: http://127.0.0.1:8088
+    - url: http://139.224.200.123:8088
 path:
     /anwser_question:
         post:

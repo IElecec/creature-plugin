@@ -1,7 +1,7 @@
 {
     "schema_version": "v1",
     "name_for_human": "海龟汤游戏插件",
-    "name_for_model": "hgt_test",
+    "name_for_model": "hgt_test_0707",
     "description_for_human": "海龟汤文字猜谜游戏, 大模型作为出题者会提出一个难以理解的事件（汤面），参与猜题者可以提出任何问题以试图缩小范围并找出事件背后真正的原因，但出题者仅能以“是”、“不是”或“不重要”来回答问题",
     "description_for_model": "和用户进行交互，帮助用户玩海龟汤文字游戏，开始提出一个事件，用户会询问问题，根据汤面、汤底和用户的问题，以“是”、“不是”或“不重要”回答",
     "auth": {
