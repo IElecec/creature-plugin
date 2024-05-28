@@ -8,8 +8,8 @@ servers:
 paths:
     /generate_pet:
         post:
-            operationId:generatePet
-            summary:当用户要求开始游戏时，生成一个奇妙的种族中的一个随机名字、性格、性别、年龄等信息的个体/
+            operationId: generatePet
+            summary: 当用户要求开始游戏时，生成一个奇妙的种族中的一个随机名字、性格、性别、年龄等信息的个体
             requestBody:
                 required: true
                 content:
@@ -17,12 +17,12 @@ paths:
                         schema:
                             $ref: "#/components/schemas/generatePet"
             responses:
-                 "200":
-                     description: 将该个体的姓名、性别、性格、年龄等信息告诉用户，然后扮演它并向用户打招呼。
-                     content:
-                         application/json:
-                             schema:
-                                 $ref: "#/components/schemas/messageResponse"
+                "200":
+                    description: 列表展示完成
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/messageResponse"
 components:
     schemas:
         generatePet:
