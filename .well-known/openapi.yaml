@@ -28,7 +28,7 @@ paths:
             operationId: getInformation
             summary: 展示异兽信息。
             responses:
-                "200":
+                "800":
                     description: 信息展示完成
                     content:
                         application/json:
