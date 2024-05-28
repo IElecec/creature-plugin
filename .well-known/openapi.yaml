@@ -22,7 +22,7 @@ paths:
                      content:
                          application/json:
                              schema:
-                                $ref: "#/components/schemas/greetUser"
+                                $ref: "#/components/schemas/messageResponse"
     # /anwser_question:
     #     post:
     #         operationId: anwserQuestion
@@ -45,18 +45,11 @@ components:
     schemas:
         generatePet:
             type: object
-            required: [start]
+            required: [question]
             properties:
                 question:
                     type: string
                     description: 用户请求开始游戏。
-        greetUser:
-            type: object
-            required: [message]
-            properties:
-                question:
-                    type: string
-                    description: 扮演生成的宠物并向用户打招呼
         # anwserQuestion:
         #     type: object
         #     required: [question]
@@ -64,11 +57,11 @@ components:
         #         question:
         #             type: string
         #             description: 用户提出一个问题。
-        # messageResponse:
-        #     type: object
-        #     required: [message]
-        #     properties:
-        #         message:
-        #             type: string
-        #             description: 回复信息
+        messageResponse:
+            type: object
+            required: [message]
+            properties:
+                message:
+                    type: string
+                    description: 回复信息
 

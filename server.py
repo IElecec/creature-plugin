@@ -39,8 +39,9 @@ def make_json_response(data, status_code=200):
 #     return make_json_response({"message": "你的判断是：是还是不是。", "prompt": prompt})
 @app.route("/generate_pet",methods=['POST'])
 async def generate_pet():
-    pet = request.get_json()['pet']
-    
+    message = f"请生成一个全新的物种,并生成一个它的个体"
+    prompt = f"该物种具有独特的习性、界门纲目科属种以及生活习性，该个体具有随机的姓名、年龄、性别、性格"
+    return make_json_response({"message":message,"prompt":prompt})
 @app.route("/logo.png")
 async def plugin_logo():
     return send_file('logo.png', mimetype='image/png')
