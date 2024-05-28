@@ -54,9 +54,7 @@ components:
             type: object
             required: [pet]
             properties:
-                wordbook:
-                    type: array
-                    items:
-                        type: string
+                pet:
+                    type: string
                     description: 显示异兽的信息
 
