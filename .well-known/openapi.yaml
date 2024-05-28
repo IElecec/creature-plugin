@@ -27,7 +27,7 @@ components:
     schemas:
         generatePet:
             type: object
-            required: [query]
+            required: [question]
             properties:
                 question:
                     type: string
