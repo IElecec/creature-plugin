@@ -74,7 +74,7 @@ async def generate_pet():
 @app.route("/get_information",methods=['GET'])
 async def get_information():
     # pet = request.get_json()['pet']
-    prompt = "如果该异兽的部分信息在之前的文本中没有涉及，则临时生成并分配"+f"在开头添加提示语:“异兽终端为您服务！”,将该异兽的所有信息以表格的形式分行列举出来,信息包括："+",".join(characters)+
+    prompt = "如果该异兽的部分信息在之前的文本中没有涉及，则临时生成并分配"+"在开头添加提示语:“异兽终端为您服务！”,将该异兽的所有信息以表格的形式分行列举出来,信息包括："+",".join(characters)+"不允许出现未知"
     return make_json_response({"pet":"之前与用户相遇的异兽，且具有完整的信息","prompt":prompt})
 
 @app.route("/logo.png")
