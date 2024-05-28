@@ -68,12 +68,12 @@ async def generate_pet():
     attribute = random.choice(attributes)
     habitat = random.choice(habitats)
     message = "请生成一个全新的物种,并生成一个它的个体"
-    prompt = f"该物种具有该背景:{habitat},请着重体现这一背景设定，且该生物且具有以下属性{attribute},且具有以下信息:"+"、".join(characters)+"形容一下该生物的外貌，但不要显示该个体的具体信息"
+    prompt = f"该物种具有该背景:{habitat}，且该生物且具有以下属性{attribute},且具有以下信息:"+"、".join(characters)+"不要告诉我该个体的具体信息"
     return make_json_response({"message":message,"prompt":prompt})
 
 @app.route("/get_information",methods=['GET'])
 async def get_information():
-    pet = request.get_json('pet')
+    pet = request.get_json()['pet']
     prompt = f"将该物种的各种信息'[信息种类]：具体内容'的格式表格的形式分行列举出来,信息包括"+",".join(characters)
     return make_json_response({"pet":pet,"prompt":prompt})
 
