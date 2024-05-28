@@ -2,16 +2,10 @@ version: 0.0.1
 examples:
       - context: # 对话历史
           - role: user
-            content: 我的问题是这个人是不是男人？
+            content: 开始游戏吧！
           - role: bot
             plugin:
-              operationId: anwserQuestion
-              thoughts: 这是用户根据汤面进行提问的需求
+              operationId: generatePet
+              thoughts: 用户发起了开始游戏的要求。
               requestArguments:
-                question: "这个人是不是男人?"     
-      - context: # 对话历史
-          - role: user
-            content: 你知道海龟汤怎么玩吗
-          - role: bot
-            plugin:
-              thoughts: 我不需要使用以上工具
+                start: "开始游戏"     

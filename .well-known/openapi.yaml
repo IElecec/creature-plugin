@@ -1,43 +1,74 @@
 openapi: 3.0.1
 info:
-    title: 海龟汤游戏插件
-    description: 和用户进行交互，帮助用户玩海龟汤文字游戏，开始提出一个事件，用户会询问问题，根据汤面、汤底和用户的问题，以“是”、“不是”或“不重要”回答
+    title: 智心铸灵
+    description: 和用户进行交互，帮助用户玩宠物互动养成游戏，开始时生成一个奇妙的生物种族中的一个随机名字、性格、性别、年龄等信息的个体，用户会以各种方式与其互动，大模型会根据该个体的信息予以合理的回应。
     version: "v1"
 servers:
     - url: http://139.224.200.123:8088
 paths:
-    /anwser_question:
+    /generate_pet:
         post:
-            operationId: anwserQuestion
-            summary: 提取用户提的一个问题
+            operationId:generatePet
+            summary:当用户要求开始游戏时，生成一个奇妙的种族中的一个随机名字、性格、性别、年龄等信息的个体/
             requestBody:
                 required: true
                 content:
                     application/json:
                         schema:
-                            $ref: "#/components/schemas/anwserQuestion"
+                            $ref: "#/components/schemas/generatePet"
             responses:
-                "200":
-                    description: 用“是”、“不是”或“不重要”回答用户的问题。
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/messageResponse"
+                 "200":
+                     description: 将该个体的姓名、性别、性格、年龄等信息告诉用户，然后扮演它并向用户打招呼。
+                     content:
+                         application/json:
+                             schema:
+                                $ref: "#/components/schemas/greetUser"
+    # /anwser_question:
+    #     post:
+    #         operationId: anwserQuestion
+    #         summary: 提取用户提的一个问题
+    #         requestBody:
+    #             required: true
+    #             content:
+    #                 application/json:
+    #                     schema:
+    #                         $ref: "#/components/schemas/anwserQuestion"
+    #         responses:
+    #             "200":
+    #                 description: 用“是”、“不是”或“不重要”回答用户的问题。
+    #                 content:
+    #                     application/json:
+    #                         schema:
+    #                             $ref: "#/components/schemas/messageResponse"
 
 components:
     schemas:
-        anwserQuestion:
+        generatePet:
             type: object
-            required: [question]
+            required: [start]
             properties:
                 question:
                     type: string
-                    description: 用户提出一个问题。
-        messageResponse:
+                    description: 用户请求开始游戏。
+        greetUser:
             type: object
             required: [message]
             properties:
-                message:
+                question:
                     type: string
-                    description: 回复信息
+                    description: 扮演生成的宠物并向用户打招呼
+        # anwserQuestion:
+        #     type: object
+        #     required: [question]
+        #     properties:
+        #         question:
+        #             type: string
+        #             description: 用户提出一个问题。
+        # messageResponse:
+        #     type: object
+        #     required: [message]
+        #     properties:
+        #         message:
+        #             type: string
+        #             description: 回复信息
 

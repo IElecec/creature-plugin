@@ -1,9 +1,9 @@
 {
     "schema_version": "v1",
-    "name_for_human": "海龟汤游戏插件(模仿文档测试）",
-    "name_for_model": "hgt_test_0707",
-    "description_for_human": "海龟汤文字猜谜游戏, 大模型作为出题者会提出一个难以理解的事件（汤面），参与猜题者可以提出任何问题以试图缩小范围并找出事件背后真正的原因，但出题者仅能以“是”、“不是”或“不重要”来回答问题",
-    "description_for_model": "和用户进行交互，帮助用户玩海龟汤文字游戏，开始提出一个事件，用户会询问问题，根据汤面、汤底和用户的问题，以“是”、“不是”或“不重要”回答",
+    "name_for_human": "智心铸灵",
+    "name_for_model": "ChatGNO_Test",
+    "description_for_human": "虚拟宠物互动养成游戏, 大模型作为会随机生成一个奇妙的生物，参与猜题者可以与该生物进行多种互动，大模型将扮演这一生物予以回应。",
+    "description_for_model": "和用户进行交互，帮助用户玩宠物互动养成游戏，开始时生成一个奇妙的生物种族中的一个随机名字、性格、性别、年龄等信息的个体，用户会以各种方式与其互动，大模型会根据该个体的信息予以合理的回应。",
     "auth": {
         "type": "none"
     },
@@ -12,8 +12,7 @@
         "url": "http://139.224.200.123:8088/.well-known/openapi.yaml"
     },
     "logo_url": "http://139.224.200.123:8088/logo.png",
-    "contact_email": "support@example.com",
-    "legal_info_url": "http://www.example.com/legal",
+    "contact_email": "2231573241@QQ.com",
     "examples": {
         "url": "http://139.224.200.123:8088/.well-known/example.yaml"
     }
