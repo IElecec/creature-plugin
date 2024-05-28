@@ -30,7 +30,7 @@ def make_json_response(data, status_code=200):
 #     question = request.get_json()['question']
 #     tangdi = hgt.cur_story['汤底']
 #     prompt = f"你正在玩海龟汤，游戏状态是{hgt.status}， 根据汤底：{tangdi}, 用“是”、“不是”、或“不重要”回答问题：{question}，" \
-#               "回答必须只能从“是”、“不是”、或“不重要”这三个里选择。不允许添加内容。"
+#           "回答必须只能从“是”、“不是”、或“不重要”这三个里选择。不允许添加内容。"
 #     return make_json_response({"message": "我的回答是：", "prompt": prompt})
 # @app.route("/add_story", methods=['POST'])
 # async def add_story():
@@ -50,13 +50,13 @@ def make_json_response(data, status_code=200):
 async def generate_pet():
     habitat = random.choice(habitats)
     message = "请生成一个全新的物种,并生成一个它的个体"
-    prompt = f"该物种具有以下信息:{",".join(attributes)},且具有一下背景:{habitat}"
+    prompt = "该物种具有以下信息:"+"、".join(attributes)+f",且具有以下背景:{habitat}"
     return make_json_response({"message":message,"prompt":prompt})
 
 @app.route("/get_information",methods=['POST'])
 async def get_information():
     pet = request.get_json('pet')
-    prompt = f"将该物种的各种信息'属性：具体内容'的格式表格的形式分行列举出来,信息包括"+",".join(attributes)
+    prompt = f"将该物种的各种信息'[属性]：具体内容'的格式表格的形式分行列举出来,信息包括"+",".join(attributes)
     return make_json_response({"pet":pet,"prompt":prompt})
 
 @app.route("/logo.png")
