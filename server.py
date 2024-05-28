@@ -67,15 +67,15 @@ def make_json_response(data, status_code=200):
 async def generate_pet():
     attribute = random.choice(attributes)
     habitat = random.choice(habitats)
-    message = "请生成一个全新的物种,并生成一个它的个体"
-    prompt = f"该物种具有该背景:{habitat}，且该生物且具有以下属性{attribute},且具有以下信息:"+"、".join(characters)+"不要告诉我该个体的具体信息"
+    message = "请生成一个全新的物种,并生成一个它的个体,并描述一下我与它相遇的场景，但不要告知我它除了外貌之外的信息"
+    prompt = f"该物种具有该背景:{habitat}，且该生物且具有以下属性{attribute},且具有以下信息:"+"、".join(characters)
     return make_json_response({"message":message,"prompt":prompt})
 
 @app.route("/get_information",methods=['GET'])
 async def get_information():
-    pet = request.get_json()['pet']
-    prompt = f"将该物种的各种信息'[信息种类]：具体内容'的格式表格的形式分行列举出来,信息包括"+",".join(characters)
-    return make_json_response({"pet":pet,"prompt":prompt})
+    # pet = request.get_json()['pet']
+    prompt = f"将该个人的各种信息'[信息种类]：具体内容'的格式表格的形式分行列举出来,信息包括："+",".join(characters)
+    return make_json_response({"pet":之前生成的生物个体,"prompt":prompt})
 
 @app.route("/logo.png")
 async def plugin_logo():
