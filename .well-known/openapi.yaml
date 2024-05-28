@@ -25,16 +25,15 @@ paths:
                                 $ref: "#/components/schemas/messageResponse"
     /get_information:
         get:
-            operationId:getInformation
-            summary:显示异兽信息
+            operationId: getInformation
+            summary: 展示异兽信息。
             responses:
                 "200":
-                    description:信息显示完成
+                    description: 信息展示完成
                     content:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/getInformation"
-        
 components:
     schemas:
         generatePet:
