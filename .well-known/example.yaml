@@ -9,3 +9,12 @@ examples:
               thoughts: 用户发起了开始游戏的要求,应该生成一个奇妙的生物。
               requestArguments:
                 query: "请生成一个全新的物种，该物种具有独特的习性，界门纲目科属种以及生活习性，请生成一个它的具有随机姓名、年龄、性别、性格的个体。"
+      - context: # 对话历史
+          - role: user
+            content: 请告诉我它的详细信息！
+          - role: bot
+            plugin:
+              operationId: getInformation
+              thoughts: 用户要求获取异兽的所有信息。
+              requestArguments:
+                query: "请告诉我之前与用户相遇的异兽的完整的信息，如果该异兽的部分信息在之前没有提及，则临时生成该信息。在回答开头添加提示语:“异兽终端为您服务！”,将该异兽的所有信息以表格的形式分行列举出来。

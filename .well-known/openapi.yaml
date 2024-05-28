@@ -24,16 +24,22 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/messageResponse"
     /get_information:
-        get:
+        post:
             operationId: getInformation
             summary: 展示异兽信息。
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/getInformation"
             responses:
                 "200":
-                    description: 信息展示完成
+                    description: 成功展示信息！
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/getInformation"
+                                $ref: "#/components/schemas/messageResponse"
 components:
     schemas:
         generatePet:
@@ -52,7 +58,7 @@ components:
                     description: 回复信息
         getInformation:
             type: object
-            required: [pet]
+            required: [query]
             properties:
                 pet:
                     type: string
