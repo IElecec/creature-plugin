@@ -23,24 +23,6 @@ paths:
                          application/json:
                              schema:
                                 $ref: "#/components/schemas/messageResponse"
-    # /anwser_question:
-    #     post:
-    #         operationId: anwserQuestion
-    #         summary: 提取用户提的一个问题
-    #         requestBody:
-    #             required: true
-    #             content:
-    #                 application/json:
-    #                     schema:
-    #                         $ref: "#/components/schemas/anwserQuestion"
-    #         responses:
-    #             "200":
-    #                 description: 用“是”、“不是”或“不重要”回答用户的问题。
-    #                 content:
-    #                     application/json:
-    #                         schema:
-    #                             $ref: "#/components/schemas/messageResponse"
-
 components:
     schemas:
         generatePet:
@@ -50,13 +32,6 @@ components:
                 question:
                     type: string
                     description: 用户请求开始游戏。
-        # anwserQuestion:
-        #     type: object
-        #     required: [question]
-        #     properties:
-        #         question:
-        #             type: string
-        #             description: 用户提出一个问题。
         messageResponse:
             type: object
             required: [message]

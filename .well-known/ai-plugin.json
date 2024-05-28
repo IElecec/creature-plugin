@@ -11,6 +11,7 @@
         "type": "openapi",
         "url": "http://139.224.200.123:8088/.well-known/openapi.yaml"
     },
+    "legal_info_url": "http://www.example.com/legal",
     "logo_url": "http://139.224.200.123:8088/logo.png",
     "contact_email": "2231573241@QQ.com",
     "examples": {
