@@ -71,7 +71,7 @@ async def generate_pet():
     prompt = f"该物种具有该背景:{habitat}，且该生物且具有以下属性{attribute},且具有以下信息:"+"、".join(characters)+"生成所有的这些信息，但不要告知用户，描述一下用户与它相遇的场景,形容一下它的外貌。注意不要将这些生成的信息告诉用户!"
     return make_json_response({"message":message,"prompt":prompt})
 
-@app.route("/get_information",methods=['GET'])
+@app.route("/get_information",methods=['POST'])
 async def get_information():
     # pet = request.get_json()['pet']
     prompt = "如果该异兽的部分信息在之前的文本中没有涉及，则临时生成并分配"+"在开头添加提示语:“异兽终端为您服务！”,将该异兽的所有信息以表格的形式分行列举出来,信息包括："+",".join(characters)+"不允许出现未知"

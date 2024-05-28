@@ -49,6 +49,13 @@ components:
                 query:
                     type: string
                     description: 用户请求开始游戏。
+        getInformation:
+            type: object
+            required: [query]
+            properties:
+                pet:
+                    type: string
+                    description: 用户请求获取异兽信息
         messageResponse:
             type: object
             required: [message]
@@ -56,11 +63,4 @@ components:
                 message:
                     type: string
                     description: 回复信息
-        getInformation:
-            type: object
-            required: [query]
-            properties:
-                pet:
-                    type: string
-                    description: 显示异兽的信息
 
