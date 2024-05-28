@@ -56,7 +56,7 @@ async def openapi_spec():
     with open(".well-known/openapi.yaml", encoding="utf-8") as f:
         text = f.read()
         return text, 200, {"Content-Type": "text/yaml"}
-    @app.route("/.well-known/example.yaml")
+@app.route("/.well-known/example.yaml")
 async def example_spec():
     with open(".well-known/example.yaml", encoding="utf-8") as f:
         text = f.read()
