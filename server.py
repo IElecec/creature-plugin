@@ -74,7 +74,7 @@ async def generate_pet():
 @app.route("/get_information",methods=['GET'])
 async def get_information():
     pet = request.get_json('pet')
-    prompt = f"将该物种的各种信息'特征：具体内容'的格式表格的形式分行列举出来,信息包括"+",".join(characters)
+    prompt = f"将该物种的各种信息'[信息种类]：具体内容'的格式表格的形式分行列举出来,信息包括"+",".join(characters)
     return make_json_response({"pet":pet,"prompt":prompt})
 
 @app.route("/logo.png")
