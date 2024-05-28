@@ -53,7 +53,7 @@ components:
             type: object
             required: [query]
             properties:
-                pet:
+                query:
                     type: string
                     description: 用户请求获取异兽信息
         messageResponse:
