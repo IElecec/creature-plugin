@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-    title: 智心铸灵-异兽终端
+    title: 异兽终端
     description: 该插件是“智心铸灵”项目的辅助插件，功能包括生成一只异兽（一种奇异的生物）、与异兽交互、显示异兽的信息。
     version: "v1"
 servers:
